@@ -1,6 +1,7 @@
 import { PencilIcon, PlusIcon, TrashIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 
+//Botão de adicionar (CreateInvoice)
 export function CreateInvoice() {
   return (
     <Link
@@ -13,10 +14,11 @@ export function CreateInvoice() {
   );
 }
 
+//Botão de atualizar (UpdateInvoice)
 export function UpdateInvoice({ id }: { id: string }) {
   return (
     <Link
-      href="/dashboard/invoices"
+      href={`/dashboard/invoices/${id}/edit`}
       className="rounded-md border p-2 hover:bg-gray-100"
     >
       <PencilIcon className="w-5" />
@@ -24,6 +26,7 @@ export function UpdateInvoice({ id }: { id: string }) {
   );
 }
 
+//Botão de excluir (DeleteInvoice)
 export function DeleteInvoice({ id }: { id: string }) {
   return (
     <>
